@@ -2,7 +2,7 @@ from distutils.util import strtobool
 from papy import actions
 from papy.utils import ai_say, ai_ask, config, DEFAULT_AI_NAME
 
-def run() -> None:
+def main() -> None:
     # Load names from config
     ai_name = config.get('ai_name', DEFAULT_AI_NAME)
     username = config.get('username')
@@ -28,3 +28,5 @@ def run() -> None:
             ai_say("I'm not sure about that yet.")
         else:
             fun()
+
+main()
